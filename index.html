@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div class="header">
+      <img src="img/logo.jpg" alt="logo" />
+      <h1>EthMC</h1>
+    </div>
+  </head>
+  <body>
+    <h2 class="description">Playing Minecraft Bedrock</h2>
+    <div class="video">
+      <button onclick="fire()">Light on fire</button>
+    </div>
+
+    <input id="userinput" /> <br />
+
+    <script>
+      const ws = new WebSocket("ws://law-camel.at.ply.gg:12719");
+      function fire() {
+        var name = document.getElementById("userinput").value;
+        const msg = JSON.stringify({
+          body: {
+            message: "fire",
+            name: name,
+          },
+          header: {
+            eventName: "cmd",
+          },
+        });
+        ws.send(msg);
+      }
+    </script>
+  </body>
+</html>

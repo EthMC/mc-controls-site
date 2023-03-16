@@ -1,0 +1,44 @@
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+  border-radius: 50%;
+}
+
+.header h1 {
+  position: relative;
+  top: 0px;
+  left: 10px;
+  font-size: 50px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: rgb(21, 20, 20);
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: white;
+}
