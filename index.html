@@ -40,6 +40,20 @@
         });
         ws.send(msg);
       }
+
+      function drunk() {
+        var name = document.getElementById("userinput").value;
+        const msg = JSON.stringify({
+          body: {
+            message: "drunk",
+            name: name,
+          },
+          header: {
+            eventName: "cmd",
+          },
+        });
+        ws.send(msg);
+      }
     </script>
   </body>
 </html>
